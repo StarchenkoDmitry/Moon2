@@ -1,0 +1,82 @@
+https://www.cyberforum.ru/asm-beginners/thread369461.html
+
+
+
+.MODEL SMALL
+.STACK 100h
+.DATA
+    HelloMessage DB 'Hello World',13,10,'$'
+.CODE
+START:
+    mov ax,@data
+    mov ds,ax
+    mov ah,9
+    mov dx,OFFSET HelloMessage
+    int 21h
+    mov ah,4ch
+    int 21h
+END START
+
+
+mov cx,100
+a1:
+вывод надписи на экран
+loop a1
+
+
+==================
+c#
+
+char: хранит одиночный символ в кодировке Unicode и занимает 2 байта. Представлен системным типом System.Char. Этому типу соответствуют символьные литералы:
+
+String Class     UTF-16
+
+Definition
+Namespace:
+System
+Assembly:
+System.Runtime.dll
+Represents text as a sequence of UTF-16 code units.
+
+
+string: хранит набор символов Unicode. Представлен системным типом System.String. Этому типу соответствуют строковые литералы.
+
+1
+2
+string hello = "Hello";
+string word = "world";
+
+
+==================
+https://stackoverflow.com/questions/6140223/c-boost-encode-decode-utf-8
+
+C ++ и Boost: кодирование / декодирование UTF-8
+
+wchar_t uchars[] = {0x5e9, 0x5dc, 0x5d5, 0x5dd, 0};
+wstring ws(uchars);
+string s = encode_utf8(ws); 
+// s now holds "\xd7\xa9\xd7\x9c\xd7\x95\xd7\x9d"
+wstring ws2 = decode_utf8(s);
+// ws2 now holds {0x5e9, 0x5dc, 0x5d5, 0x5dd}
+
+
+
+==================
+Java
+
+https://www.google.com/search?q=%D1%82%D0%B8%D0%BF%D1%8B+%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85+%D0%B2+java&oq=%D1%82%D0%B8%D0%BF%D1%8B+%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85+%D0%B2+java&aqs=chrome..69i57j0i512j0i22i30l5.7399j0j7&sourceid=chrome&ie=UTF-8
+
+В Java существует 8 примитивных типов данных:
+byte (целые числа, 1 байт)
+short (целые числа, 2 байта)
+int (целые числа, 4 байта)
+long (целые числа, 8 байтов)
+float (вещественные числа, 4 байта)
+double (вещественные числа, 8 байтов)
+char (символ Unicode, 2 байта)
+boolean (значение истина/ложь, 1 байт)
+31 окт. 2013 г.
+
+
+
+
