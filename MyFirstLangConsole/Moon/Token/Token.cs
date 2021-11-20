@@ -11,13 +11,20 @@ namespace MyFirstLangConsole.Moon.Token
         Null, New, Var,
         Throw, Delete, Void,
 
-        int8, uint8,
-        int16, uint16,
-        int32, uint32,
+        Int8, UInt8,
+        Int16, UInt16,
+        Int32, UInt32,
+        Int64, UInt64,
+        Int128, UInt128,
 
-        Char, Wchar, Dchar, 
+        Float32, Float64,
 
-        And, Or,
+        Char, Wchar, Dchar, Bool,
+
+
+        True, False,
+
+        And, Or, 
 
         Class, Struct,
 
